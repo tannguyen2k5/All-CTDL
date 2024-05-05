@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Ð?nh nghia c?u trúc SinhVien
+// Ãinh nghia cau trÃºc SinhVien
 struct SinhVien {
     int maSV;
     char hoTen[50];
@@ -10,7 +10,7 @@ struct SinhVien {
     struct SinhVien *next;
 };
 
-// Hàm nh?p thông tin sinh viên t? bàn phím
+// HÃ m nhap thÃ´ng tin sinh viÃªn tu bÃ n phÃ­m
 void nhapThongTinSV(struct SinhVien **head) {
     struct SinhVien *newSV = (struct SinhVien *)malloc(sizeof(struct SinhVien));
     if (newSV == NULL) {
@@ -21,7 +21,7 @@ void nhapThongTinSV(struct SinhVien **head) {
     printf("Nhap ma so sinh vien: ");
     scanf("%d", &newSV->maSV);
     printf("Nhap ho ten: ");
-    scanf(" %[^\n]s", newSV->hoTen); // Ð?c c? d?u cách trong tên
+    scanf(" %[^\n]s", newSV->hoTen); // Doc ca dau cÃ¡ch trong tÃªn
     printf("Nhap tuoi: ");
     scanf("%d", &newSV->tuoi);
 
@@ -29,7 +29,7 @@ void nhapThongTinSV(struct SinhVien **head) {
     *head = newSV;
 }
 
-// Hàm in ra danh sách sinh viên
+// HÃ m in ra danh sÃ¡ch sinh viÃªn
 void inDanhSach(struct SinhVien *head) {
     printf("\nDanh sach sinh vien:\n");
     printf("Ma SV\tHo ten\t\tTuoi\n");
@@ -67,7 +67,7 @@ int main() {
         }
     } while (choice != 3);
 
-    // Gi?i phóng b? nh?
+    // Giai phÃ³ng bo nho
     while (head != NULL) {
         struct SinhVien *temp = head;
         head = head->next;
